@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.map_container {
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+    background-color: azure;
+}
+.germany_map_container {
+    position: relative;
+    overflow: hidden;
+    background-color: azure;
+}
+
+#worldmap {
+    width: 100%;
+}
+#germanymap {
+    height: 75%;
+}
+
+path {
+    fill: rgb(102, 129, 129);
+    stroke: white;
+    stroke-width: 1;
+}
+
+/* Martin Baldwin */
+#MB path {
+    fill: green;
+    cursor: pointer;
+}
+#MB path:hover {
+    fill: rgb(0, 174, 173);
+    cursor: pointer;
+}
+/* Alain Fleuri */
+#AF path {
+    fill: orange;
+    cursor: pointer;
+}
+#AF path:hover {
+    fill: rgb(0, 174, 173);
+    cursor: pointer;
+}
+/* Simone Gabriele */
+#SG path {
+    fill: yellowgreen;
+    cursor: pointer;
+}
+#SG path:hover {
+    fill: rgb(0, 174, 173);
+    cursor: pointer;
+}
+/* David Plottke */
+#DP path {
+    fill: blueviolet;
+    cursor: pointer;
+}
+#DP path:hover {
+    fill: rgb(0, 174, 173);
+    cursor: pointer;
+}
+/* Noah Schildkamp */
+#NS path {
+    fill: rgb(0, 255, 157);
+    cursor: pointer;
+}
+#NS path:hover {
+    fill: rgb(0, 174, 173);
+    cursor: pointer;
+}
+/* Moritz May */
+#MM path {
+    fill: blue;
+    cursor: pointer;
+}
+#MM path:hover {
+    fill: rgb(0, 174, 173);
+    cursor: pointer;
+}
+/* Itamar Grundshtein */
+#IG path {
+    fill: rgb(209, 211, 89);
+    cursor: pointer;
+}
+#IG path:hover {
+    fill: rgb(0, 174, 173);
+    cursor: pointer;
+}
+/* Backer McKenzie */
+#BM path {
+    fill: rgb(121, 23, 104);
+    cursor: pointer;
+}
+#BM path:hover {
+    fill: rgb(0, 174, 173);
+    cursor: pointer;
+}
+path#DE {
+    fill: linear-gradient(45deg, #ffffff 25%, #f0f0f0 25%, #f0f0f0 50%, #ffffff 50%, #ffffff 75%, #f0f0f0 75%, #f0f0f0 100%);
+    cursor: pointer;
+}
+path#DE:hover {
+    fill: rgb(0, 174, 173);
+    cursor: pointer;
+}
+
+
+.modal-content {
+    width: 800px;
+}
