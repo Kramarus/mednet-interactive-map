@@ -1,12 +1,21 @@
-svg {
-    width: 100%;
-    height: 100%;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.map {
+    display: inline-block;
+      height: 100%;
+      width: auto;
 }
 
-.map {
-    width: 900px;
-    height: 900px;
+svg {
+    width: 100%;
+    height: auto;
 }
+
+
 
 .other {
     fill: lightgray;
@@ -14,8 +23,8 @@ svg {
 
 path {
     fill: lightgrey;
-    stroke: red;
-    stroke-width: 0.2;
+    stroke: white;
+    stroke-width: 0.4; 
 }
 
 
@@ -25,8 +34,10 @@ a > * {
 }
 
 a path {
-    fill: black;
+    fill: darkgrey;
 }
+
+
 
 a:hover path {
     fill: rgb(0,175,173);
