@@ -68,8 +68,8 @@
 
 <body>
    <div class="map">
-      <svg class="wrapper" id="svgmap" mapsvg:geoViewBox="-30 35 90 35" width="1920" height="1080"
-         version="1.1" id="svg258" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"
+      <svg class="wrapper" id="svgmap" mapsvg:geoViewBox="-30 35 90 35" width="1920" height="1080" version="1.1"
+         id="svg258" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"
          xmlns:mapsvg="http://mapsvg.com">
          <defs id="defs262" />
          <g id="g1097" transform="translate(140.79065,-0.0707691)">
@@ -928,9 +928,14 @@
 
    <script>
       const svg = document.getElementById('svgmap');
-      let scale = 2.5;
-      svg.style.left = '-313px';
-      svg.style.top = '103px';
+      let scale = 2;
+
+      window.addEventListener('load', (e) => {
+         svg.style.transform = scale(3);
+         svg.style.left = '-313px';
+         svg.style.top = '103px';
+      });
+
 
       svg.addEventListener('wheel', function (event) {
          event.preventDefault();
