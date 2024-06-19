@@ -928,7 +928,9 @@
 
    <script>
       const svg = document.getElementById('svgmap');
-      let scale = 2;
+      let scale = 2.5;
+      svg.style.left = '-313px';
+      svg.style.top = '103px';
 
       svg.addEventListener('wheel', function (event) {
          event.preventDefault();
