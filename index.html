@@ -940,24 +940,31 @@
 
 
       svg.addEventListener('wheel', function (event) {
-         event.preventDefault();
+      event.preventDefault();
 
-         const scaleFactor = 0.1; // Scale factor for zooming
+      const rect = svg.getBoundingClientRect();
+      const offsetX = event.clientX - rect.left;
+      const offsetY = event.clientY - rect.top;
+      const transformOriginX = (offsetX / rect.width) * 100;
+      const transformOriginY = (offsetY / rect.height) * 100;
 
-         if (event.deltaY < 0) { // Zoom in
-            scale += scaleFactor;
-         } else { // Zoom out
-            scale -= scaleFactor;
-         }
+      svg.style.transformOrigin = `${transformOriginX}% ${transformOriginY}%`;
 
-         // Ensure scale doesn't go below 0
-         if (scale < 0.8) {
-            scale = 0.8;
-         }
+      const scaleFactor = 0.1; // Scale factor for zooming
 
-         svg.style.transform = `scale(${scale})`;
-         svg.style.transformOrigin = 'center center';
-      });
+      if (event.deltaY < 0) { // Zoom in
+         scale += scaleFactor;
+      } else { // Zoom out
+         scale -= scaleFactor;
+      }
+
+      // Ensure scale doesn't go below 0
+      if (scale < 0.8) {
+         scale = 0.8;
+      }
+
+      svg.style.transform = `scale(${scale})`;
+   });
 
       /////////////////////////////
       const wrapper = document.querySelector('.wrapper');
