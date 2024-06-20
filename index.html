@@ -929,7 +929,9 @@
    <script>
       const svg = document.getElementById('svgmap');
       let scale = 2;
-
+      
+      svg.style.transformOrigin = 'center center';
+      
       window.addEventListener('load', (e) => {
          svg.style.transform = scale(3);
          svg.style.left = '-313px';
